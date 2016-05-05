@@ -18,20 +18,13 @@ function recordSound() {
 	  
   }
 
- function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
+
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
      console.log(Media)
-	 showAlert();
+	 $(".logfile").html("LOG:"+Media);
 	myMedia = new Media("myrecording.mp3",function() {
-		console.log("recordAudio():Audio Success");
+
 		myMedia.play();
 	});
 
