@@ -92,9 +92,16 @@
     <allow-intent href="market:*"/>
 	<uses-permission name="android.permission.INTERNET" />
 	<uses-permission name="android.permission.VIBRATE" />
+	<uses-permission name="android.permission.RECORD_AUDIO" />
+	<uses-permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
+	<key>Plugins</key>
+	<dict>
+		<key>Capture</key>
+		<string>CDVCapture</string>
+	</dict>
   </platform>
 </widget>
