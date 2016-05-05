@@ -95,5 +95,8 @@
   <platform name="ios">
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
+	<feature name="Capture">
+		<param name="ios-package" value="CDVCapture" />
+	</feature>
   </platform>
 </widget>
