@@ -1,0 +1,56 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+
+	<!-- Start of first page -->
+	<div data-role="page" id="foo" data-transition="flip">
+
+		<div data-role="header">
+			<h1>Foo</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm first in the source order so I'm shown as the page.</p>
+			<p>View internal page called <a href="#bar" data-transition="slide">bar</a></p>
+		</div><!-- /content -->
+
+	</div><!-- /page -->
+
+	<!-- Start of second page -->
+	<div data-role="page" id="bar" data-transition="flip">
+
+		<div data-role="header">
+			<h1>Bar</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#foo"  data-rel="back">Back to foo</a></p>
+		</div><!-- /content -->
+
+	</div><!-- /page -->
+	<div data-role="footer" data-id="myfooter" class="nav-glyphish-example ui-footer ui-bar-b" data-theme="b" role="contentinfo">
+		<div data-role="navbar" class="ui-navbar" role="navigation">
+			<ul class="ui-grid-d">
+				<li class="ui-block-a"><a href="#foo" data-icon="grid" class="ui-link ui-btn ui-icon-grid ui-btn-icon-top">A</a></li>
+				<li class="ui-block-b"><a href="#" data-icon="star" class="ui-link ui-btn ui-icon-star ui-btn-icon-top">B</a></li>
+				<li class="ui-block-c"><a href="#" data-icon="gear" class="ui-link ui-btn ui-icon-gear ui-btn-icon-top">C</a></li>
+				<li class="ui-block-d"><a href="#" data-icon="arrow-l" class="ui-link ui-btn ui-icon-arrow-l ui-btn-icon-top">D</a></li>
+				<li class="ui-block-e"><a href="#" data-icon="arrow-r" class="ui-link ui-btn ui-icon-arrow-r ui-btn-icon-top">E</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
