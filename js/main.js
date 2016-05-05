@@ -5,7 +5,7 @@ function recordSound() {
 		//recorder && recorder.stop();
 		myMedia.stopRecord();
 		$(".btn-record").html("START RECORD")
-		mediaRec.play();
+		myMedia.play();
 		recording=false
 	  }else{
 		//recorder && recorder.record();
@@ -25,6 +25,8 @@ function onDeviceReady() {
 	myMedia = new Media("myrecording.mp3",function() {
 
 		myMedia.play();
+	},function() {
+		$(".logfile").html("LOG:"+myMedia);
 	});
 
 }
