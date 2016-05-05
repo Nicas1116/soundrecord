@@ -1,3 +1,4 @@
+var recording =false;
 function recordSound() {
 	  if(recording){
 		//recorder && recorder.stop();
@@ -20,7 +21,7 @@ function recordSound() {
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     alert(Media);
-	myMedia = new Media("documents://beer.mp3",function() {
+	/*myMedia = new Media("documents://beer.mp3",function() {
 		alert("recordAudio():Audio Success");
 		myMedia.play();
 	},
@@ -28,6 +29,6 @@ function onDeviceReady() {
 	// error callback
 	function(err) {
 		alert("recordAudio():Audio Error: "+ err.code);
-	});
+	});*/
 
 }
