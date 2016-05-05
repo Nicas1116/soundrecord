@@ -10,29 +10,72 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/recordmp3.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
-	<!-- Start of first page -->
-	<div data-role="page" id="foo" data-transition="flip">
-
+	<div data-role="page" id="addvoice">
 		<div data-role="header">
-			<h1>Foo</h1>
-		</div><!-- /header -->
-
+			<h1>APPNAME</h1>
+		</div>
 		<div role="main" class="ui-content">
-			<p>I'm first in the source order so I'm shown as the page.</p>
-			<p>View internal page called <a href="#bar" data-transition="slide">bar</a></p>
-		</div><!-- /content -->
+		 <div class="audiothing"></div>
+			<a href="javascript:recordSound();void(0);" class="btn-record ui-btn ui-corner-all">START RECORD</a>
+			 
 
-	</div><!-- /page -->
-
+		</div>
+	</div>
+	<div data-role="page" id="landing">
+		<div data-role="header">
+			<h1>APPNAME</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p class="icontitle">SOMEBIGICON</p>
+			<a href="#login" class="ui-btn ui-corner-all">LOGIN</a>
+			<a href="#registerwithemail" class="ui-btn ui-corner-all">REGISTER</a>
+		</div>
+	</div>
+	<div data-role="page" id="login">
+		<div data-role="header">
+			<h1>APPNAME</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p class="icontitle">SOMEBIGICON</p>
+			<a href="javascript:loginwithfacebook();void(0);" class="ui-btn ui-corner-all">LOGIN WITH FACEBOOK</a>
+			<a href="#loginwithemail" class="ui-btn ui-corner-all">LOGIN WITH EMAIL</a>
+		</div>
+	</div>
+	<div data-role="page" id="loginwithemail">
+		<div data-role="header">
+			<h1>APPNAME</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p class="icontitle">SOMEBIGICON</p>
+			<input type="text" name="name" id="text-basic" value="" placeholder="Email">
+			<input type="password" name="password" id="text-basic" value="" placeholder="Password">
+			<a href="javascript:login();void(0);" class="ui-btn ui-corner-all">LOGIN</a>
+		</div>
+	</div>
+	<div data-role="page" id="registerwithemail">
+		<div data-role="header">
+			<h1>APPNAME</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p class="icontitle">SOMEBIGICON</p>
+			<input type="text" name="name" id="text-basic" value="" placeholder="Email">
+			<input type="password" name="password" id="text-basic" value="" placeholder="Password">
+			<input type="password" name="cpassword" id="text-basic" value="" placeholder="Confirm Password">
+			<label for="slider-flip-m">Gender:</label>
+			<select name="gender" id="slider-flip-m" data-role="slider" data-mini="true">
+			    <option value="male" selected="">Male</option>
+			    <option value="female" >Female</option>
+			</select>
+			<a href="javascript:register();void(0);" class="ui-btn ui-corner-all">REGISTER</a>
+		</div>
+	</div>
 	<!-- Start of second page -->
 	<div data-role="page" id="bar" data-transition="flip">
-
-		<div data-role="header">
-			<h1>Bar</h1>
-		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
 			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
@@ -43,11 +86,11 @@
 	<div data-role="footer" data-id="myfooter" class="nav-glyphish-example ui-footer ui-bar-b" data-theme="b" role="contentinfo">
 		<div data-role="navbar" class="ui-navbar" role="navigation">
 			<ul class="ui-grid-d">
-				<li class="ui-block-a"><a href="#foo" data-icon="grid" class="ui-link ui-btn ui-icon-grid ui-btn-icon-top">A</a></li>
-				<li class="ui-block-b"><a href="#" data-icon="star" class="ui-link ui-btn ui-icon-star ui-btn-icon-top">B</a></li>
-				<li class="ui-block-c"><a href="#" data-icon="gear" class="ui-link ui-btn ui-icon-gear ui-btn-icon-top">C</a></li>
-				<li class="ui-block-d"><a href="#" data-icon="arrow-l" class="ui-link ui-btn ui-icon-arrow-l ui-btn-icon-top">D</a></li>
-				<li class="ui-block-e"><a href="#" data-icon="arrow-r" class="ui-link ui-btn ui-icon-arrow-r ui-btn-icon-top">E</a></li>
+				<li class="ui-block-a"><a href="#foo" class="ui-link ui-btn ui-btn-icon-top">Home</a></li>
+				<li class="ui-block-b"><a href="#bar" class="ui-link ui-btn ui-btn-icon-top">Search</a></li>
+				<li class="ui-block-c"><a href="#" class="ui-link ui-btn ui-btn-icon-top">ADD</a></li>
+				<li class="ui-block-d"><a href="#" class="ui-link ui-btn ui-btn-icon-top">Notification</a></li>
+				<li class="ui-block-e"><a href="#" class="ui-link ui-btn ui-btn-icon-top">Profile</a></li>
 			</ul>
 		</div>
 	</div>

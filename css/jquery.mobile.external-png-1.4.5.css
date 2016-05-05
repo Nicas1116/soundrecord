@@ -585,7 +585,6 @@ html body .ui-group-theme-a .ui-bar-inherit {
 	color: 					#333 /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ 	#eee /*{a-bar-shadow-color}*/;
 	font-weight: bold;
-	padding-top: 20px;
 }
 .ui-bar-a {
 	border-width: 1px;
@@ -976,7 +975,7 @@ div.ui-mobile-viewport {
 .ui-mobile [data-role=page],
 .ui-mobile [data-role=dialog],
 .ui-page {
-	top: 0;
+	top: 0px;
 	left: 0;
 	width: 100%;
 	min-height: 100%;
@@ -3580,6 +3579,7 @@ div.ui-slider-switch:after {
 div.ui-slider-switch.ui-mini {
 	height: 29px;
 	top: 0;
+	width: 100%;
 }
 .ui-slider-inneroffset {
 	margin: 0 16px;

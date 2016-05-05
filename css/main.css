@@ -1,2 +1,4 @@
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
+.icontitle{text-align:center;font-size: 40px;}
+.audiothing {display:none;}
