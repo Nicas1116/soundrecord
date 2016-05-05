@@ -3,10 +3,9 @@ var recording =false;
 function recordSound() {
 	  if(recording){
 		//recorder && recorder.stop();
-		myMedia.startRecord();
+		myMedia.stopRecord();
 		$(".btn-record").html("START RECORD")
-		createDownloadLink();
-		recorder.clear();
+		mediaRec.play();
 		recording=false
 	  }else{
 		//recorder && recorder.record();
