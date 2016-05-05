@@ -98,7 +98,6 @@
   <platform name="ios">
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
-	<key>Plugins</key>
 	<dict>
 		<key>Capture</key>
 		<string>CDVCapture</string>
