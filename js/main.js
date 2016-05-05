@@ -59,7 +59,16 @@ var recording=false
     } catch (e) {
       alert('No web audio support in this browser!');
     }
-
+	var capture = navigator.device.capture;
+	navigator.microphone(function (on) {
+	  if (on) {
+		// now you can use the Cordova media plugin to record
+		startUserMedia()
+	  }
+	  else {
+		// instruct how to enable your app's access to the microphone
+	  }
+	});
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
    
     });
