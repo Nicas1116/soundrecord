@@ -20,7 +20,7 @@ function recordSound() {
   var myMedia;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-    alert(Media);
+    
 	/*myMedia = new Media("documents://beer.mp3",function() {
 		alert("recordAudio():Audio Success");
 		myMedia.play();
